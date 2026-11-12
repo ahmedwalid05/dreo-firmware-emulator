@@ -1,0 +1,13 @@
+image: firmware/app.bin  (real ARM Thumb, Unicorn)
+
+[OK ] typical multipart tail     firmware=80   faithful=80   naive=80   len=93
+[OK ] needle absent              firmware=-1   faithful=-1   naive=-1   len=47
+[OK ] needle at very start       firmware=0    faithful=0    naive=0    len=16
+[OK ] two needles (want first)   firmware=4    faithful=4    naive=4    len=36
+[OK ] empty body                 firmware=-1   faithful=-1   naive=-1   len=0
+[OK ] needle at exact end        firmware=-1   faithful=-1   naive=7    len=12  <- diverges from naive find (firmware off-by-one)
+[OK ] binary payload w/ CRLFs    firmware=264  faithful=264  naive=264  len=275
+[OK ] partial needle only        firmware=-1   faithful=-1   naive=-1   len=35
+
+ALL MATCH — real firmware code confirms the firmware-faithful model,
+including the end-of-buffer off-by-one the naive model gets wrong.

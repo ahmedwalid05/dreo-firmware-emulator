@@ -1,0 +1,11 @@
+# Never commit firmware (vendor copyright) or secrets
+firmware/*.bin
+*.bin
+*.img
+*.rbl
+*license*.json
+*keep-private*
+*.pem
+*.key
+__pycache__/
+*.pyc
