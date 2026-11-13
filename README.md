@@ -1,4 +1,4 @@
-# dreo-fw-emu
+# dreo-firmware-emulator
 
 Emulate **real Dreo smart-fan firmware** under [Unicorn](https://www.unicorn-engine.org/).
 This runs the *actual* firmware instructions — not a reimplementation — for both
